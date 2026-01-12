@@ -1,0 +1,744 @@
+/* ===============================
+   ESTILOS GENERALES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4efe6; 
+    color: #2f2f2f;
+    line-height: 1.7;
+}
+
+/* ===============================
+   HERO CABO DE GATA
+================================ */
+
+.hero-cabo-gata {
+    height: 90vh;
+    background-image: url("../images/genoveses.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+/* Capa oscura suave para que el texto se lea */
+.hero-cabo-gata::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    color: white;
+}
+
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* ===============================
+   CABECERA
+================================ */
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25px 40px;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;
+    color: white;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+/* ===============================
+   BOTÓN HERO SIN FONDO
+================================ */
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 30px;
+    border: 2px solid white;
+    border-radius: 30px;
+
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+/* ===============================
+   SCROLL SUAVE
+================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ===============================
+   CONTENIDO
+================================ */
+
+.contenido {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contenido h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+/* ===============================
+   SECCIÓN MAPA
+================================ */
+
+.mapa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.mapa-texto h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.mapa-imagen img {
+    width: 100%;
+    border-radius: 12px;
+}
+.mapa-link {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.mapa-link img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mapa-link:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+/* ===============================
+   NATURALEZA VIVA
+================================ */
+
+.naturaleza {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.naturaleza h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.naturaleza-intro {
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+.naturaleza-bloques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.naturaleza-bloque {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.naturaleza-bloque img {
+    width: 200px;
+    height: auto;
+
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 10px;
+
+    transition: transform 0.4s ease; 
+}
+
+
+.naturaleza-bloque h4 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.naturaleza-bloque img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+
+/* ===============================
+   ENCANTOS
+================================ */
+
+.encantos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.encanto {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.encanto h4 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+
+/* ===============================
+   TARJETAS CLICKABLES
+================================ */
+
+.tarjeta-click {
+    cursor: pointer;
+}
+
+/* Texto ampliado oculto por defecto */
+.texto-ampliado {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Cuando está activa */
+.tarjeta-click.activa .texto-ampliado {
+    display: block;
+}
+.tarjeta-click:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+
+.tarjeta-click:hover img {
+    transform: scale(1.08);
+}
+
+/* ===============================
+   BOTÓN INFO TARJETAS
+================================ */
+
+.btn-info {
+    display: inline-block;
+    margin-top: 15px;
+
+    font-size: 0.9rem;
+    text-decoration: none;
+
+    color: #6b8e23;              /* verde ecoturismo */
+    border-bottom: 1px solid transparent;
+
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-info:hover {
+    border-bottom: 1px solid #6b8e23;
+}
+
+
+/* ===============================
+   CIERRE
+================================ */
+
+.cierre {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #e8e1d4;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background-color: #6b8e23;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #556b2f;
+}
+
+/* ===============================
+   HERO IMPACTO
+================================ */
+
+.hero-impacto {
+    height: 70vh;
+    background-image: url("../images/escullos_no.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.hero-impacto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Cabecera sólida para páginas internas */
+.header-solid {
+    position: relative;
+    background-color: #2f2f2f;
+}
+
+/* ===============================
+   IMPACTOS
+================================ */
+
+.impactos {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.impactos h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.impacto-lista {
+    list-style: none;
+}
+
+.impacto-lista li {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ===============================
+   SECCIÓN VÍDEO
+================================ */
+
+.video-info {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.video-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.video-info p {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+.video-simple {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 12px;
+}
+
+
+
+/* ===============================
+   CONSEJOS
+================================ */
+
+.consejos {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.consejos h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.consejos-intro {
+    max-width: 750px;
+    margin: 0 auto 60px auto;
+}
+
+.consejos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.consejo {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.consejo h4 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   INFOGRAFÍA
+================================ */
+
+.infografia {
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.infografia h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.infografia-intro {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.infografia img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 14px;
+}
+
+
+/* ===============================
+   HERO ECOTURISMO
+================================ */
+
+.hero-ecoturismo {
+    height: 70vh;
+    background-image: url("../images/vivir_es_facil_con_los_ojos_cerrados.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-ecoturismo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* ===============================
+   PLAYAS
+================================ */
+
+.playa {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.playa-invertida {
+    direction: rtl;
+}
+
+.playa-invertida > * {
+    direction: ltr;
+}
+
+.playa-texto h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.playa-texto h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.playa-texto ul {
+    margin-left: 20px;
+}
+
+.playa-imagen img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* ===============================
+   INFO EXTRA
+================================ */
+
+.info-extra,
+.info-actividades,
+.info-meteo {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.info-extra h3,
+.info-actividades h3,
+.info-meteo h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.info-extra p {
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   ACTIVIDADES
+================================ */
+
+.btn-secundario {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+
+    border: 2px solid #6b8e23;
+    border-radius: 30px;
+
+    color: #6b8e23;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-secundario:hover {
+    background-color: #6b8e23;
+    color: white;
+}
+
+/* ===============================
+   METEO
+================================ */
+
+.meteo-widget {
+    margin-top: 25px;
+    border-radius: 12px;
+    overflow: auto;
+    max-height: 350px;
+}
+
+/* ===============================
+   BLOQUES EN PARALELO
+================================ */
+
+.info-doble {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    align-items: center;
+}
+
+/* Ajuste visual de cada bloque */
+.info-doble > div {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.info-doble h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.info-doble p {
+    font-size: 0.95rem;
+}
+
+/* ===============================
+   FOOTER REDES SOCIALES
+================================ */
+
+.footer {
+    background-color: #f4efe6;
+    color: rgb(19, 19, 19);
+    padding: 40px 20px;
+}
+
+.footer-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-redes {
+    display: flex;
+    gap: 25px;
+}
+
+.red-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.red-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.red-social:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    .playa {
+        grid-template-columns: 1fr;
+    }
+
+    .playa-invertida {
+        direction: ltr;
+    }
+
+    .info-doble {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .footer-redes {
+        justify-content: center;
+    }
+}
+
